@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Eventos DOM</title>
+   <style>
+      body {
+         background: rgb(230, 224, 164);
+      }
+      div#area {
+         font: normal 20pt Arial;
+         background: rgb(71, 205, 71);
+         color: white;
+         width: 900px;
+         line-height: 200px;
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <div id="area">  <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" > ESSES COMANDOS FORAM SUBSTITUIDOS PELO ADDEVENTLISTENER-->
+      <strong>Interaja...</strong>
+   </div>
+
+   <script>
+      var a = window.document.getElementById('area')
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrar)
+      a.addEventListener('mouseout', sair)
+
+      function clicar() {
+         a.innerHTML = '<strong>Clicou!</strong>'
+         a.style.background = 'yellow'
+         a.style.color = 'black'
+      }
+
+      function entrar() {
+         a.innerHTML = '<strong>Entrou!</strong>'
+         a.style.background = 'green'
+         a.style.color = 'white'
+      }
+
+      function sair() {
+         a.innerHTML = '<strong>Saiu!</strong>'
+         a.style.background = 'green'
+         a.style.color = 'white'
+      }
+
+   </script>
+</body>
+</html>

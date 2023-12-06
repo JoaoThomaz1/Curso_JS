@@ -1,0 +1,44 @@
+Operadores Aritméticos {
+   
+   +  operador de soma
+   -  operador de subtração
+   *  operador de multiplicação
+   /  operador de divisão
+   %  operador de divisão de inteiro
+   ** operador de potênciação
+}
+
+Operadores de Atribuição {
+
+   s += x;  Soma o valor que já tinha anteriormente com o valor descrito
+   s -= x;  Subtrai do valor que já tinha anteriormente o valor descrito
+   s ++;    Soma mais um ao valor que já tinha anteriormente na variável
+   s --;    Subtrai menos um ao valor que já tinha anteriormente na variável
+}
+
+Operadores Relacionais { //sempre retornaram valores booleanos(true || false)
+
+   >     Maior que
+   <     Menor que
+   >=    Maior igual á
+   <=    Menor igual á
+   ==    Igual á
+   !=    Diferente de
+   ===   Identico á
+}
+
+Operadores Lógicos {
+
+   !     Negação   - NOT(não)
+   &&    Conjunção - AND(e)
+   ||    Disjunção - OR(ou)
+}
+
+Operadores Ternários { //famoso 'if' resumido
+
+   ?    Condição 
+   :    Se não
+
+   EX: 'teste'? 'true' : 'false'
+        media > 7? 'APROVADO' : 'REPROVADO' //media = 5.5
+}

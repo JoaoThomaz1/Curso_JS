@@ -1,0 +1,32 @@
+`texto ${s}`      = Para adicionar uma variavél sem concatenação!
+s.length          = Retorna quantos caracteres a string tem!
+s.toUpperCase()   = Coloca todas as letras em maíusculas
+s.toLowerCase()   = Coloca todas as letras em minpuculas
+Number.parseFloat = Transforma String em Number
+String(s)         = Transforma Number em String
+document.write    = Retorna o texto na tela e não em um chatbox
+ln                = Para pular a linha Ex: document.writeln()
+*<strong></strong>= Tranforma em negrito o que estiver dentro
+*<br/>            = Quebra a linha
+s.toFixed()       = Para colocar quantas casas decimais quiser
+replace("", "")   = Para trocar algum sinal por outro, ou até mesmo tirar
+
+
+
+
+
+
+
+
+
+
+
+
+
+s.toLocaleString('pt-BR', {styke: 'currency', currency: 'BRL'}) = Serve para transformar em monetário da moeda desejada, no exemplo colocamos para REAL.
+
+
+
+* -> Comandos de HTML.
+
+**-> Onde se tem a letra "s" é para colocar a variavel que lhe convem.

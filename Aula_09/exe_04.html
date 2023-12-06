@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Primeiros Passos com DOM</title>
+   <style>
+      body {
+         background: rgb(195, 191, 145);
+         color: black;
+         font: normal 18pt Arial;
+      }
+
+      button {
+         align: center;
+         font: normal 15px Arial;
+      }
+   </style>
+</head>
+<body>
+   <h1>Iniciando Estudos com DOM</h1>
+   <p>Aqui vai o resultado</p>
+   <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+   <div id="clique">
+      <button>Clique em mim</button>
+   </div>
+   <script>
+      var corpo = window.document.body
+      var p1 = window.document.getElementsByTagName('p')[0]
+   
+      // o mais indicado para buscar é o querySelector
+      // para utilizar o query temos o normar querySelector e o plural querySelectorAll
+      // utilizando '#' para id e '.' para classes 
+      var d = window.document.querySelector('div#clique')
+
+      d.style.background = 'black'
+
+   </script>
+</body>
+</html>
