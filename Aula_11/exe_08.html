@@ -11,7 +11,7 @@
    
       button {
 
-      }      
+      };     
    </style>
 </head>
 
@@ -30,24 +30,22 @@
          <div id="res">
 
          </div>
-         <script>
-            function calcular() {
-               var txtv = window.document.querySelector('input#txtvel')
-               var vel = Number(txtv.value)
-               var res = window.document.querySelector('div#res')
+      }
+      
+      function calcular() {
+         var txtv = window.document.querySelector('input#txtvel')
+         var vel = Number(txtv.value)
+         var res = window.document.querySelector('div#res')
 
-               res.innerHTML = `<br>A velocidade registrada foi de <strong>${vel} Km/h</strong>`
+         res.innerHTML = `<br>A velocidade registrada foi de <strong>${vel} Km/h</strong>`
 
-               if () {
-                  res.innerHTML = `<p>O ${motorista} estava acima do limite, <strong>MULTADO</strong>!</p>`
-               }
-               
-               res.innerHTML = `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong>!</p>`
-            
-            }
+         if () {
+            res.innerHTML = `<p>O ${motorista} estava acima do limite, <strong>MULTADO</strong>!</p>`
+         }
          
-         </script>
-      } 
+         res.innerHTML = `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong>!</p>`
+      
+      }
    </script>
 </body>
 </html>
