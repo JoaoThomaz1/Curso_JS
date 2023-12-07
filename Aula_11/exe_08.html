@@ -5,47 +5,41 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>DETRAN</title>
    <style>
-      h1{ 
 
-      };
-   
-      button {
-
-      };     
    </style>
 </head>
 
-<body>
+<body id="telaPrincipal">
+
    <h1>Sistema de Multas</h1>
 
-   Motorista Notificado <input type="text" id="nome">
-   <script>
+   Motorista Notificado : <input type="text" id="nome"><br>
+   <br>Velocidade Registrada: <input type="number" name="txtvel" id="txtvel"> Km/h<br>
+   <input type="button" value="Verificar" onclick="calcular()">
 
-      var motorista = window.document.querySelector('input#nome')
-      
-      function cadastro(){
-         
-         Velocidade Registrada: <input type="number" name="txtvel" id="txtvel"> Km/h
-         <input type="button" value="Verificar" onclick="calcular()">
-         <div id="res">
-
-         </div>
-      }
+   <script>  
       
       function calcular() {
+
+         var motorista = window.document.querySelector('input#nome')
          var txtv = window.document.querySelector('input#txtvel')
          var vel = Number(txtv.value)
          var res = window.document.querySelector('div#res')
 
-         res.innerHTML = `<br>A velocidade registrada foi de <strong>${vel} Km/h</strong>`
+         res.innerHTML = `<p><br>A velocidade registrada foi de <strong>${vel} Km/h</strong></p>`
 
-         if () {
+         if (vel > 80) {
             res.innerHTML = `<p>O ${motorista} estava acima do limite, <strong>MULTADO</strong>!</p>`
          }
          
-         res.innerHTML = `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong>!</p>`
+         res.innerHTML = `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong></p>`
       
       }
    </script>
+
+   <div id="res">
+
+   </div>
+
 </body>
 </html>
