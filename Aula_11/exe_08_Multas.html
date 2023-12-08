@@ -13,33 +13,32 @@
 
    <h1>Sistema de Multas</h1>
 
-   Motorista Notificado : <input type="text" id="nome"><br>
+   Motorista Notificado : <input type="text" name="motorista" id="nome"><br>
    <br>Velocidade Registrada: <input type="number" name="txtvel" id="txtvel"> Km/h<br>
    <input type="button" value="Verificar" onclick="calcular()">
 
+   <div id="res"></div>
+   
    <script>  
       
       function calcular() {
 
-         var motorista = window.document.querySelector('input#nome')
+         var motorista = window.document.getElementById('nome').value
          var txtv = window.document.querySelector('input#txtvel')
-         var vel = Number(txtv.value)
          var res = window.document.querySelector('div#res')
+         var vel = Number(txtv.value)
 
-         res.innerHTML = `<p><br>A velocidade registrada foi de <strong>${vel} Km/h</strong></p>`
+
+         res.innerHTML = `<p>A velocidade registrada foi de <strong>${vel} Km/h</strong></p>`
 
          if (vel > 80) {
-            res.innerHTML = `<p>O ${motorista} estava acima do limite, <strong>MULTADO</strong>!</p>`
+            res.innerHTML += `<p>O <strong>${motorista}</strong> estava acima do limite, <strong>MULTADO</strong>!</p>`
          }
          
-         res.innerHTML = `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong></p>`
+         res.innerHTML += `<p><strong>Dirija com atencão e respeitando as leis de trânsito!</strong></p>`
       
       }
    </script>
-
-   <div id="res">
-
-   </div>
 
 </body>
 </html>
