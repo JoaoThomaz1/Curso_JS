@@ -6,19 +6,33 @@
    <title>Estrageiro</title>
 </head>
 <style>
-
+   .button{
+      padding: 10px 20px;
+      background-color: #4e86ab;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+   }
 </style>
 <body>
    <h1>Identificador de Estrangeiro</h1>
 
    Nome: <input type="text" id="nome">
    País onde mora: <input type="text" id="pais">
+   <input type="button" value="CONFIRMAR" class="button" onclick="confirmar()">
    
   <div id="res"></div> 
 
   <script>
+   function confirmar() {
       var paisBase = "Brasil"
-      var paisMoradia = window.document.querySelector('input#pais')
+      var paisMoradia = window.document.getElementById('pais')
+      var nome = window.document.getElementById('nome')
+
+      res.innerHTML = `<p>O Senhor <strong>${nome}</strong> se encontra morando atualmente no <strong>${paisMoradia}</strong>!</p>`
+
+   }
   </script>
 </body>
 </html>
