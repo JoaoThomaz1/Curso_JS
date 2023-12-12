@@ -6,6 +6,13 @@
    <title>Estrageiro</title>
 </head>
 <style>
+   .title{
+      padding: 10px 20px;
+      background-color: #c44f4f;
+      color: #fff;
+      border: black;
+      border-radius: 5px;
+   }
    .button{
       padding: 10px 20px;
       background-color: #4e86ab;
@@ -16,23 +23,32 @@
    }
 </style>
 <body>
-   <h1>Identificador de Estrangeiro</h1>
+   <h1 class="title">Identificador de Estrangeiro</h1>
 
-   Nome: <input type="text" id="nome">
+   País Requisitado: <input type="text" id="paisBase"><br>
+   <br> Nome: <input type="text" id="nome">
    País onde mora: <input type="text" id="pais">
    <input type="button" value="CONFIRMAR" class="button" onclick="confirmar()">
    
   <div id="res"></div> 
 
   <script>
+
    function confirmar() {
-      var paisBase = "Brasil"
-      var paisMoradia = window.document.getElementById('pais')
-      var nome = window.document.getElementById('nome')
+      var paisBase = window.document.getElementById('paisBase').value
+      var paisMoradia = window.document.getElementById('pais').value
+      var nome = window.document.getElementById('nome').value
 
       res.innerHTML = `<p>O Senhor <strong>${nome}</strong> se encontra morando atualmente no <strong>${paisMoradia}</strong>!</p>`
 
+      if (paisMoradia != paisBase) {
+         res.innerHTML += `<p> Por nao pertencer ao País requisitado (<strong>${paisBase}</strong>), o Senhor <strong>${nome}</strong> se encontra na situacao de <strong>"Estrangeiro"</strong>!</p>`
+      } else {
+         res.innerHTML += `<p>Por pertencer ao País requisitado <strong>(${paisBase})</strong>, o Senhor <strong>${nome}</strong> está legalmente no País!</p>`
+      }
+      
    }
+
   </script>
 </body>
 </html>
